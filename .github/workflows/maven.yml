@@ -33,3 +33,9 @@ jobs:
         ORG_GRADLE_PROJECT_ossrhUsername: ${{ secrets.maven_ossrhUsername }}
         ORG_GRADLE_PROJECT_ossrhPassword: ${{ secrets.maven_ossrhPassword }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: Upload AAR Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: hiddenapibypass-release
+        path: library/build/outputs/aar/*.aar
