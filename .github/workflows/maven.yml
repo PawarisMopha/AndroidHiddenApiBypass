@@ -24,7 +24,8 @@ jobs:
         java-version: '21'
     
     - name: Build with Gradle
-      run: ./gradlew publish -DPUBLISH_URL=https://maven.pkg.github.com/PawarisMopha/AndroidHiddenApiBypass
+      run: ./gradlew build -x publish
+      
       env:
         GIT_CONFIG_NOSYSTEM: true
         ORG_GRADLE_PROJECT_signingKey: ${{ secrets.maven_pgp_signingKey }}
