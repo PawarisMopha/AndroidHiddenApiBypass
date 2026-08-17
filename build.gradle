@@ -1,3 +1,16 @@
 plugins {
     alias(libs.plugins.lsplugin.publish)
 }
+
+android {
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation 'org.lsposed.hiddenapibypass:hiddenapibypass:+'
+}
