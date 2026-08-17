@@ -1,3 +1,7 @@
 plugins {
     alias(libs.plugins.lsplugin.publish)
 }
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+}

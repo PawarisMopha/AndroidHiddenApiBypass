@@ -30,5 +30,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-include(":stub", ":library")
+include(":stub", ":library", ":app")
 rootProject.name = "HiddenApiBypass"
