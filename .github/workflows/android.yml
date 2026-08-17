@@ -1,6 +1,7 @@
 name: Build
 
 on:
+  workflow_dispatch:
   pull_request:
   push:
     branches:
@@ -141,4 +142,4 @@ jobs:
         with:
           name: ${{ matrix.api-level }}_${{ matrix.arch }}_outputs
           path: library/build/outputs
-          compression-level: 9
+          compression-level: 6
